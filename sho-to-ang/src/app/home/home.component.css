@@ -1,0 +1,133 @@
+*{font-family: system-ui;}
+
+body {
+    background-color:#DFF9FF;
+    
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #90CAFF;
+    height: 14%;
+}
+
+.logo{
+    float: left;
+    margin-left: 25px;
+    margin-top: 20px;
+    height: 80px;
+    width: 250px;
+}
+
+.header_user{
+    float:right;
+    margin-right: 25px;
+    padding: 20px; 
+    margin-top: 5px;
+}
+
+.dropdown {
+    background-color: #90CAFF; 
+    padding: 4px;
+    margin: 1px 0;
+    margin-left: 20px;
+    height: 15%;
+} 
+
+.dropdown p {
+    margin: 0; 
+    font-size: 12px; 
+    color: #837979; 
+}
+
+.main{
+    
+    width: 100%;
+    height: 90%;
+    background-color: #DFF9FF;
+    position: fixed;
+    margin-top: 96.4px;
+    margin-left: 0px;
+    margin-right: 0;
+    
+    
+}
+.container{
+    
+    background-color: #DFF9FF;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    
+} 
+
+.rectangle-frame1 {
+    border: none;
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #BBDEFF;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    margin-left: 110px;
+}
+
+.rectangle-frame2 {
+    border: none;
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #BBDEFF;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 110px;
+}
+
+.rectangle-frame3{
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #BBDEFF;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border: none;
+}
+
+.rectangle-frame1 h4{
+    text-align: center;
+    font-size: 25px; 
+    color: #000000; 
+    font-weight: 700;
+    line-height: 90px;
+}
+
+.rectangle-frame2 h4{
+    text-align: center;
+    font-size: 25px; 
+    color: #000000; 
+    font-weight: 700;
+    line-height: 90px;
+}
+
+.rectangle-frame3 h4{
+    text-align: center;
+    font-size: 25px; 
+    color: #000000; 
+    font-weight: 700;
+    line-height: 90px;
+}
+
+
+#clickableText {
+    cursor: pointer; 
+}
