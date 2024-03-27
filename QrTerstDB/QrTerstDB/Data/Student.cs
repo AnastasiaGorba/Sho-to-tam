@@ -9,29 +9,24 @@ namespace QrTerstDB.Data
     public class Student
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string MiddleName { get; set; }
+        public string first_name { get; set; }
+        public string last_name { get; set; }
+        public string midle_name { get; set; }
+        public int dormintory_number { get; set; }
+        public int room_number { get; set; }
+        public long phone_number { get; set; }
+        public DateTime date { get; set; }
+
         public string identification_code { get; set; }
         private readonly ApplicationDbContext applicationDbContext;
+        public Student ()
+        {
+
+        }
 
         public Student(ApplicationDbContext applicationDbContext)
         {
             this.applicationDbContext = applicationDbContext;
-        }
-        public Student()
-        {
-
-        }
-
-        public string GetStudById(string id)
-        {
-            var contact = 0;
-            if (contact == null)
-            {
-                return "not found";
-            }
-            return contact.ToString();
         }
     }
 }

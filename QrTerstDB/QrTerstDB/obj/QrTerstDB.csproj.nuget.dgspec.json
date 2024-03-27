@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\QrTerstDB\\QrTerstDB\\QrTerstDB.csproj": {}
+    "D:\\Sho-to-tam\\QrTerstDB\\QrTerstDB\\QrTerstDB.csproj": {}
   },
   "projects": {
-    "D:\\code\\QrTerstDB\\QrTerstDB\\QrTerstDB.csproj": {
+    "D:\\Sho-to-tam\\QrTerstDB\\QrTerstDB\\QrTerstDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\QrTerstDB\\QrTerstDB\\QrTerstDB.csproj",
+        "projectUniqueName": "D:\\Sho-to-tam\\QrTerstDB\\QrTerstDB\\QrTerstDB.csproj",
         "projectName": "QrTerstDB",
-        "projectPath": "D:\\code\\QrTerstDB\\QrTerstDB\\QrTerstDB.csproj",
+        "projectPath": "D:\\Sho-to-tam\\QrTerstDB\\QrTerstDB\\QrTerstDB.csproj",
         "packagesPath": "C:\\Users\\Користувач\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\QrTerstDB\\QrTerstDB\\obj\\",
+        "outputPath": "D:\\Sho-to-tam\\QrTerstDB\\QrTerstDB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Користувач\\AppData\\Roaming\\NuGet\\NuGet.Config",

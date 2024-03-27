@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QrTerstDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1de9410e39f56f5a132445214c78248d3093f9f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("QrTerstDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QrTerstDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
