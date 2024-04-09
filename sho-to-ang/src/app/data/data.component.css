@@ -1,9 +1,18 @@
 *{font-family: system-ui;}
 
-.main{
-    width: 100%;
+.main {
     background-color: #DFF9FF;
-    margin-top: 96.4px;
+    width: 100%;
+    height: calc(100% - 99px); 
+    position: fixed;
+    top: 99px; 
+    overflow-y: auto; 
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        height: calc(100% - 50px); 
+    }
 }
 
 /* --------------------------------------------------- */
@@ -17,15 +26,34 @@
     font-weight: 700;
 }
 
+.bg {
+    background-color: #90CAFF;
+    font-size: 16px; 
+    font-weight: 700;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 5px 45px; 
+    cursor: pointer;
+    border-radius: 10px;
+    width: 185px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    border:none;
+}
+
+
 /* --------------------------------------------------- */
 
 .clickable-table {
     width: 1390px;
     margin-left: 45px;
     border-radius: 10px;
+    overflow: hidden;
     background-color: #BBDEFF;
     font-weight: 700;
     font-size: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
   
 .clickable-table td {
@@ -46,5 +74,9 @@
 .clickable-table tbody tr:hover {
     background-color: #DFF9FF;
     transition: background-color 0.3s;
+}
+
+.text-decoration-none{
+    color:black;
 }
 

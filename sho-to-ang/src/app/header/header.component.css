@@ -2,11 +2,16 @@
 
 header {
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
     background-color: #90CAFF;
-    height: 14%;
+    width: 100%;
+    min-height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: 14%; 
+        background-color: #90CAFF;
+    }
 }
 
 .logo{

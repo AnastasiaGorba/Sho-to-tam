@@ -1,5 +1,4 @@
 <div class="rectangle-frame5">
-    <button id="myButton" (click)="handleClick()"><b>Мешканці</b></button>
-    <button id="myButton" (click)="handleClick()"><b>Гості</b></button>
-    <button id="myButton" (click)="handleClick()"><b>Пошук</b></button>
+    <a routerLink="/data"><button class="myButton" (click)="handleClick('residents')" [class.clicked]="clickedButton === 'residents'"><b>Мешканці</b></button></a>
+    <a routerLink="/guest"><button class="myButton" (click)="handleClick('guests')" [class.clicked]="clickedButton === 'guests'"><b>Гості</b></button></a>
 </div>

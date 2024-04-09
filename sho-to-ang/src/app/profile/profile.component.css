@@ -1,24 +1,32 @@
 
-.main{
+.main {
     width: 100%;
-    height: 90%;
-    background-color: #DFF9FF;
+    height: calc(100% - 99px); 
     position: fixed;
-    margin-top: 96.4px;
+    top: 99px; 
+    overflow-y: auto; 
+    background: linear-gradient(to bottom right, #DFF9FF, #c8e1ff)
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        height: calc(100% - 50px); 
+    }
 }
 
 .rectangle-frame1 {
-    
-    border: none;
-    width: 640px;
-    height: 350px;
+    width: 660px;
+    height: 500px;
     border-radius: 10px;
-    background-color: #BBDEFF;
-    padding-right: 15px;
+    background-color: #b0d7fc;
     padding-left: 32px;
-    margin-left: -45px;
     margin-top: 75px;
-    float: left;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #BBDEFF; 
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 } 
 
 .cat{
@@ -53,53 +61,33 @@
 }
 
 .number1{
-    font-size: 18px; 
+    font-size: 16px; 
     color: #837979; 
     font-weight: 700;
     margin-left: 0px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .number2{
-    font-size: 18px; 
+    font-size: 16px; 
     color: #000000; 
     font-weight: 700;
-    margin-left: 180px;
+    margin-left: 260px;
     margin-top: -37px;
     margin-bottom: 0px;
 }
 
 /* --------------------------------------------------- */
-.rectangle-frame2 {
-    border: none;
-    width: 640px;
-    height: 350px;
-    border-radius: 10px;
-    background-color: #BBDEFF;
-    padding-right: 15px;
-    padding-left: 32px;
-    margin-right: 12px;
-    margin-top: 75px;
-    float: right;
-}
-
-.data2{
-    font-size: 13px; 
-    color: #837979; 
-    font-weight: 700;
-    padding-top: 22px;
-    padding-bottom: 17px;
-}
 
 .number11{
-    font-size: 18px; 
+    font-size: 16px; 
     color: #837979; 
     font-weight: 700;
-    margin-bottom: 12px; 
+    margin-bottom: 10px; 
 }
 
 .number22{
-    font-size: 18px; 
+    font-size: 16px; 
     color: #000000; 
     font-weight: 700;
     margin-left: 260px;

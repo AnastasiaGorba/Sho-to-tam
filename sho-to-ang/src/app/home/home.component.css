@@ -1,25 +1,28 @@
-*{font-family: system-ui;}
-
-.main{
-    
-    width: 100%;
-    height: 86%;
-    background-color: #DFF9FF;
-    /* position: fixed; */
-    margin-top: 150.4px;
+*{font-family: system-ui;
 }
 
-.container{
-    
+.main {
     background-color: #DFF9FF;
-    margin-top: 10px;
+    width: 100%;
+    height: calc(100% - 99px); 
+    position: fixed;
+    top: 99px; 
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        height: calc(100% - 50px); 
+    }
+}
+
+.container{ 
+    background-color: #DFF9FF;
     margin-bottom: 60px;
     margin-top: 60px;
-    
-} 
+}  
 
 .rectangle-frame1 {
-    border: none;
     width: 400px;
     height: 100px;
     border-radius: 10px;
@@ -28,6 +31,8 @@
     padding-left: 15px;
     margin-bottom: 20px;
     margin-left: 110px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    border: none;
 }
 
 .rectangle-frame2 {
@@ -39,6 +44,7 @@
     padding-right: 15px;
     padding-left: 15px;
     margin-left: 110px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
 
 .rectangle-frame3{
@@ -55,6 +61,7 @@
     justify-content: center; 
     align-items: center; 
     border: none;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
 
 .rectangle-frame1 h4{
@@ -83,4 +90,4 @@
 
 #clickableText {
     cursor: pointer; 
-}
+} 

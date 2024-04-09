@@ -1,17 +1,17 @@
-
-.rectangle-frame5{
-    margin-top: 97px;
+.rectangle-frame5 {
+    top: 97px; 
     position: fixed;
     width: 100%;
-    height: 7%;
-    top: 0;
-    right: 0;
-    left: 0;
     background-color: #90CAFF;
 }
 
+@media screen and (max-width: 768px) {
+    .rectangle-frame5 {
+        height: calc(100% - 92vh); 
+    }
+}
 
-#myButton {
+.myButton {
     background-color: #90CAFF; 
     border: none;
     border-top-left-radius: 10px;
@@ -22,20 +22,18 @@
     font-size: 18px; 
     cursor: pointer;
     transition-duration: 0.5s; 
-    text-align: center;
     color: #837979;
-    height: 48.5px;
-    width: 180px;
+    height: 50px;
+    width: 153px;
     margin-left: 46px;
-   
 }
-  
-#myButton:hover {
+
+.myButton:hover {
     background-color: #90CAFF; 
     color: #837979;
 }
-  
-#myButton.clicked {
-    background-color: #DFF9FF; 
+
+.myButton.clicked {
+    background:  #D4EFFF;
     color: rgb(0, 0, 0);
 }

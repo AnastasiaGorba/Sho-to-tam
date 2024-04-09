@@ -9,6 +9,7 @@ import { DataComponent } from './data/data.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { GuestComponent } from './guest/guest.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GuestComponent } from './guest/guest.component';
     DataComponent,
     HeaderComponent,
     MenuComponent,
-    GuestComponent
+    GuestComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
