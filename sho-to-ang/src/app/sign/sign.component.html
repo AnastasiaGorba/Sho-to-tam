@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <div class="header">
+        <img src="assets/icons/Group 1.png" class="logo">
+    </div>
+    <form (ngSubmit)="onSubmit()">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required [(ngModel)]="email">
+        <label for="identificationCode">Пароль:</label>
+        <input type="text" id="identificationCode" name="identificationCode" required [(ngModel)]="identificationCode">
+        <button type="submit" routerLink="/member-details/dsfsd">Вхід</button>
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    </form>
+</div>

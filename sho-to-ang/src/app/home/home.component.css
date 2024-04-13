@@ -1,12 +1,12 @@
-*{font-family: system-ui;
+*{font-family: 'Noto Sans';
 }
 
 .main {
-    background-color: #DFF9FF;
+    background-color: #eefbff;
     width: 100%;
-    height: calc(100% - 99px); 
-    position: fixed;
-    top: 99px; 
+    height: calc(100%); 
+    position: fixed; 
+    top: 70px; 
     overflow-y: auto;
 }
 
@@ -17,14 +17,14 @@
 }
 
 .container{ 
-    background-color: #DFF9FF;
+    background-color: #eefbff;
     margin-bottom: 60px;
     margin-top: 60px;
 }  
 
-.rectangle-frame1 {
+.container1 {
     width: 400px;
-    height: 100px;
+    height: 150px;
     border-radius: 10px;
     background-color: #BBDEFF;
     padding-right: 15px;
@@ -32,55 +32,15 @@
     margin-bottom: 20px;
     margin-left: 110px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-    border: none;
+    border: 1px solid lightgray; 
+    transition: background-color 0.3s ease;
 }
 
-.rectangle-frame2 {
-    border: none;
-    width: 400px;
-    height: 100px;
-    border-radius: 10px;
-    background-color: #BBDEFF;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: 110px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+.container1:hover {
+    background: linear-gradient(to bottom,#85c5ff, #cdd9ff, #ffff);
 }
 
-.rectangle-frame3{
-    width: 400px;
-    height: 100px;
-    border-radius: 10px;
-    background-color: #BBDEFF;
-    text-align: center;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    border: none;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-}
-
-.rectangle-frame1 h4{
-    text-align: center;
-    font-size: 25px; 
-    color: #000000; 
-    font-weight: 700;
-    line-height: 90px;
-}
-
-.rectangle-frame2 h4{
-    text-align: center;
-    font-size: 25px; 
-    color: #000000; 
-    font-weight: 700;
-    line-height: 90px;
-}
-
-.rectangle-frame3 h4{
+.container1 h4{
     text-align: center;
     font-size: 25px; 
     color: #000000; 
@@ -91,3 +51,10 @@
 #clickableText {
     cursor: pointer; 
 } 
+
+p{
+    font-size: 13px; 
+    color: #837979; 
+    font-weight: 600;
+    padding-top: 0px;
+}

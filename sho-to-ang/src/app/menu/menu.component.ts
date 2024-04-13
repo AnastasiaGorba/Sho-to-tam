@@ -6,10 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  clickedButton: string | null = null;
-
-  handleClick(action: string): void {
-    this.clickedButton = action;
-  }
+  
 }
 

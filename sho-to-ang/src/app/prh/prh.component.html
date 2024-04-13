@@ -4,9 +4,8 @@
     <div class="text1">
     Станом на 27.03.2023 рік, у гуртожитку проживає 1024 людини
     <button class="bg"><a routerLink="/search" class="text-decoration-none">Пошук мешканця</a></button>
-    </div>
-    
-    
+    </div>	
+        
     <div class="t">
         <table class="clickable-table">
             <thead>
@@ -32,22 +31,66 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let item of data">
-                    <td> {{item.number}}</td>
-                    <td><a routerLink="/prh" class="text-decoration-none">{{item.namem}}</a></td>
-                    <td>{{item.room}}</td>
-                    <td>{{item.ID}}</td>
-                    <td>{{item.debt}}</td>
-                    <td>{{item.presence}}</td>
-                    <td><a routerLink="/prh" class="text-decoration-none">
-                        <svg class="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                        </svg>
-                    </a></td>
-                </tr>
+            <tr *ngFor="let item of data">
+                <td> {{item.number}}</td>
+                <td><a routerLink="/prh" class="text-decoration-none">{{item.namem}}</a></td>
+                <td>{{item.room}}</td>
+                <td>{{item.ID}}</td>
+                <td>{{item.debt}}</td>
+                <td>{{item.presence}}</td>
+                <td><a routerLink="/prh" class="text-decoration-none">
+                    <svg class="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                </a></td>
+            </tr>
             </tbody>
         </table> 
     </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="rectangle-frame1">
+                    <div class="fn">
+                        <img src="assets/icons/baton.jpg" class="cat">
+                        <p class="data">Особиста інформація:<br></p>
+                        <p class="name">Батоненко <br> Батон Батонович</p>
+                    </div>
+
+                    <p class="number1">Номер телефона:</p>
+                    <p class="number2">+3806874521963</p>
+
+                    <p class="number1">Email:</p>
+                    <p class="number2">imia.prizvysche.pm.2022&#64;lpnu.ua</p>
+
+                    <p class="number1">Інститут:</p>
+                    <p class="number2">ІМФН</p>
+
+                    <p class="number1">Група:</p>
+                    <p class="number2">ПМ, 2 курс</p>
+        
+                    <p class="number11">ID:</p>
+                    <p class="number22">КT 18769624</p>
+                    <p class="number11">Кімната:</p>
+                    <p class="number22">535</p>
+                    <p class="number11">Перепустка дійсна до:</p>
+                    <p class="number22">24.03.2024 р.</p><br>
+
+                    <p class="number11">Остання оплата за житло:</p>
+                    <p class="number22">24.09.2023 р.</p>
+                    <p class="number11">Заборгованність:</p>
+                    <p class="number22">Так</p><br>
+
+                    <p class="number11">Гісті:</p>
+                    <p class="number22">Ні</p>
+                    <p class="number11">Заяви:</p>
+                    <p class="number22">Ні<br></p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
     <nav aria-label="Page navigation example">
         <ul class="pagination">
           <li class="page-item">
@@ -64,5 +107,5 @@
             </a>
           </li>
         </ul>
-      </nav>
-</div> 
+      </nav>  
+</div>

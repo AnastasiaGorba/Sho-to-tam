@@ -4,15 +4,16 @@
         <div class="row">
         
             <div class="col-md-6">
-                <a routerLink="/data"><button class="rectangle-frame1">
+                <a routerLink="/data"><button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
                     <h4>База даних мешканців</h4>
+                    <!-- <p>Станом на 24.03.2024 р. в гуртожитку №14 проживають 1459 мешканців</p> -->
                 </button></a>
             </div>
                 
             <div class="col-md-6">
-                <button class="rectangle-frame2">
-                    <h4>Пошук мешканців</h4>
-                </button>
+                <a routerLink="/guest"><button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
+                    <h4>Гості</h4>
+                </button></a>
             </div>
 
         </div>
@@ -24,29 +25,17 @@
         <div class="row">
         
             <div class="col-md-6">
-            <button class="rectangle-frame1">
+            <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
                 <h4>Заяви</h4>
             </button>
             </div>
             
             <div class="col-md-6">
-                <a routerLink="/guest"><button class="rectangle-frame2">
-                <h4>Гості</h4>
-            </button></a>
+                <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
+                <h4>Сканер</h4>
+            </button>
             </div>
         
-        </div>
-    </div>
-        
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <button class="rectangle-frame3">
-                    <h4>Сканер</h4>
-                </button>
-            </div>
         </div>
     </div>
 </div>

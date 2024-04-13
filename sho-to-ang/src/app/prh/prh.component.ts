@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-data',
-  templateUrl: './data.component.html',
-  styleUrl: './data.component.css'
+  selector: 'app-prh',
+  templateUrl: './prh.component.html',
+  styleUrl: './prh.component.css'
 })
-export class DataComponent {
+export class PrhComponent {
   data = [
     { number: 1, namem: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'}
   ];
 }
-
-
-

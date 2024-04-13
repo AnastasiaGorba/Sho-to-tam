@@ -37,7 +37,7 @@
     margin-top: -0px;
     margin-right: -80px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 185px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
     border: 1px solid lightgray; 
@@ -51,7 +51,8 @@
 /* --------------------------------------------------- */
 
 .clickable-table {
-    width: 1390px;
+    float: left;
+    width: 800px;
     margin-left: 45px;
     border-radius: 5px;
     overflow: hidden;
@@ -63,18 +64,20 @@
 }
   
 .clickable-table td {
-    padding: 15px; 
+    padding: 15px;
     text-align: center;
     border-bottom: 2px solid #BBDEFF;
     width: 25px;
     height: 60px;
 }
-
+  
 .clickable-table th {
     background-color: #BBDEFF;
     text-align: center;
     color: #837979;
     width: 25px;
+    padding-left: 5px;
+
 }
 
 .clickable-table tbody tr:hover {
@@ -86,12 +89,91 @@
     color:black;
 }
 
+/* ////////////////////////////////////////////////////////// */
+
+.rectangle-frame1 {
+    float: right;
+    width: 565px;
+    height: 497px;
+    border-radius: 5px;
+    background-color: #b0d7fc; 
+    padding-left: 10px;
+    margin-right: -60px;
+    border: 2px solid #BBDEFF; 
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+} 
+
+.cat{
+    float: left;
+    margin-left: -px;
+    height: 170px;
+    width: 160px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.data{
+    font-size: 13px; 
+    color: #837979; 
+    font-weight: 700;
+    padding-top: 20px;
+    padding-left: 190px;
+}
+
+.name{ 
+    font-size: 25px; 
+    color: #000; 
+    font-weight: 700;
+    padding-top: 0px;
+    padding-left: 190px;
+}
+
+.fn{
+    margin-top: 1px;
+    height: 205px;
+    width: 450px;
+}
+
+.number1{
+    font-size: 16px; 
+    color: #837979; 
+    font-weight: 700;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
+.number2{
+    font-size: 16px; 
+    color: #000000; 
+    font-weight: 700;
+    margin-left: 260px;
+    margin-top: -37px;
+    margin-bottom: 0px;
+}
+
+/* --------------------------------------------------- */
+
+.number11{
+    font-size: 16px; 
+    color: #837979; 
+    font-weight: 700;
+    margin-bottom: 10px; 
+}
+
+.number22{
+    font-size: 16px; 
+    color: #000000; 
+    font-weight: 700;
+    margin-left: 260px;
+    margin-top: -37px;
+    margin-bottom: 0px;
+}
+/* ////////////////////////////////////////// */
 .pagination {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
-
-
 .page-link {
     color: gray; 
     font-size: 13px; 
@@ -102,3 +184,4 @@
 .page-link:hover {
     color: gray;
 }
+

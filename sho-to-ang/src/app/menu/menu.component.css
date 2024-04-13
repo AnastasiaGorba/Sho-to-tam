@@ -1,39 +1,77 @@
-.rectangle-frame5 {
-    top: 97px; 
+header {
     position: fixed;
+    background-color: #BBDEFF;
     width: 100%;
-    background-color: #90CAFF;
+    height: 70px;
 }
 
+
 @media screen and (max-width: 768px) {
-    .rectangle-frame5 {
-        height: calc(100% - 92vh); 
+    .header {
+        height: 14%; 
+        background-color: #BBDEFF;
     }
 }
 
-.myButton {
-    background-color: #90CAFF; 
+.logo{
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+    height: 70px;
+    width: 210px;
+}
+
+.rectangle-frame5 {
+    position: fixed;
+    width: 20%;
+    background-color: #BBDEFF;
+    margin-left: 250px;
+    display: flex;
+}
+
+.rectangle-frame5 .myButton {
+    background-color: #BBDEFF; 
     border: none;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 18px; 
+    font-size: 16px; 
     cursor: pointer;
-    transition-duration: 0.5s; 
-    color: #837979;
-    height: 50px;
-    width: 153px;
-    margin-left: 46px;
+    color: black;
+    width: 100px;
+    margin-left: 53px;
+    margin-top: 25px;
 }
 
-.myButton:hover {
-    background-color: #90CAFF; 
-    color: #837979;
+.rectangle-frame5 .myButton:hover {
+    text-decoration: underline; 
 }
 
-.myButton.clicked {
-    background:  #D4EFFF;
-    color: rgb(0, 0, 0);
+.header_user{
+    float:right;
+    margin-right: 30px;
+    padding: 20px; 
+    margin-top: -10px;
+}
+
+.dropdown {
+    background-color: #BBDEFF; 
+    padding: 4px;
+}
+
+.dropdown p {
+    margin: 0; 
+    font-size: 12px; 
+    color: #837979; 
+    /* margin-bottom: 0px; */
+}
+
+p{
+    font-size: 13px; 
+    color: #837979; 
+    font-weight: 600;
+}
+
+.dropstart b {
+    margin-right: 10px;
 }

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-guest',
-  templateUrl: './guest.component.html',
-  styleUrl: './guest.component.css'
+  selector: 'app-newguest',
+  templateUrl: './newguest.component.html',
+  styleUrl: './newguest.component.css'
 })
-export class GuestComponent {
+export class NewguestComponent {
   data = [
     { number: 1, nameg: 'John Smith', room: 104, namem: 'John Smith', id:15656456, time: 1788 }
   ];

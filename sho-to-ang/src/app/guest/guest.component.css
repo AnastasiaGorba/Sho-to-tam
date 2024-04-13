@@ -1,11 +1,11 @@
-*{font-family: system-ui;}
+*{font-family: 'Noto Sans';}
 .main {
-    background-color: #DFF9FF;
+    background-color: #eefbff;
     width: 100%;
-    height: calc(100% - 99px); 
-    position: fixed;
-    top: 99px; 
-    overflow-y: auto; 
+    height: calc(100% - 70px);
+    position: fixed; 
+    top: 70px; 
+    overflow-y: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -17,65 +17,89 @@
 /* --------------------------------------------------- */
 
 .text1{
-    height: 120px;
-    width: 800px;
-    margin-left: 45px;
-    padding-top: 75px;
+    height: 80px;
+    width: 1300px;
+    margin-left: 53px;
+    padding-top: 30px;
     font-size: 18px; 
     font-weight: 700;
 }
 
 .bg {
-    background-color: #90CAFF;
+    float: right;
+    background-color: #BBDEFF;
     font-size: 16px; 
     font-weight: 700;
     color: black;
-    padding: 10px 20px;
+    padding-right: 0px;
     text-align: center;
-    margin: 5px 45px; 
+    margin-top: -0px;
+    margin-right: -80px;
     cursor: pointer;
     border-radius: 10px;
     width: 185px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-    border:none;
+    border: 1px solid lightgray; 
 }
+
+.bg:hover {
+    background: linear-gradient(to bottom,#85c5ff, #cdd9ff, #ffff);
+}
+
 
 /* --------------------------------------------------- */
 
 .clickable-table {
     width: 1390px;
     margin-left: 45px;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
-    background-color: #BBDEFF;
+    background-color: #eefbff;
     font-weight: 700;
     font-size: 16px;
     margin-bottom: 25px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    border: none;
 }
-  
+
 .clickable-table td {
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding: 15px; 
     text-align: center;
-    border-bottom: 1px solid #DFF9FF;
+    border-bottom: 2px solid #BBDEFF;
     width: 25px;
+    height: 60px;
 }
   
 .clickable-table th {
-    background-color: #90CAFF;
+    background-color: #BBDEFF;
     text-align: center;
     color: #837979;
     width: 25px;
 }
 
 .clickable-table tbody tr:hover {
-    background-color: #DFF9FF;
+    background-color: #BBDEFF;
     transition: background-color 0.3s;
 }
 
 .text-decoration-none{
     color:black;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+
+.page-link {
+    color: gray; 
+    font-size: 13px; 
+    font-weight: 500;
+    background-color: #eefbff;
+}
+
+.page-link:hover {
+    color: gray;
 }
 
 
