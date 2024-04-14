@@ -2,7 +2,7 @@
 <div class="main">
     
     <div class="text1">
-    Станом на 27.03.2023 рік, у гуртожитку проживає 1024 людини
+    Станом на {{message4}} рік, у гуртожитку проживає 1024 людини
     <button class="bg"><a routerLink="/search" class="text-decoration-none">Пошук мешканця</a></button>
     </div>	
         
@@ -31,8 +31,8 @@
                 </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let item of data">
-                <td> {{item.number}}</td>
+            <tr *ngFor="let item of data; let i = index ">
+                <td> {{i+1}}</td>
                 <td><a routerLink="/prh" class="text-decoration-none">{{item.namem}}</a></td>
                 <td>{{item.room}}</td>
                 <td>{{item.ID}}</td>

@@ -17,7 +17,7 @@ export class SignComponent {
   onSubmit(): void {
     // Виконуємо перевірку введених даних перед відправкою на сервер
     if (!this.email || !this.identificationCode) {
-      this.errorMessage = 'Будь ласка, заповніть всі поля'; // Відображаємо повідомлення про неповність даних
+      this.errorMessage = '*Будь ласка, заповніть всі поля'; // Відображаємо повідомлення про неповність даних
       return;
     }
   }

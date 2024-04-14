@@ -1,12 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, LOCALE_ID, Inject, OnInit } from '@angular/core';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-newguest',
   templateUrl: './newguest.component.html',
-  styleUrl: './newguest.component.css'
+  styleUrls: ['./newguest.component.css']
 })
-export class NewguestComponent {
+export class NewguestComponent implements OnInit{
+  message2: string = formatDate(new Date(), 'dd.MM.y', this.locale);
   data = [
-    { number: 1, nameg: 'John Smith', room: 104, namem: 'John Smith', id:15656456, time: 1788 }
+    {nameg: 'John Smith', room: 104, namem: 'John Smith', id:15656456, time: 1788 }
   ];
+
+  constructor(@Inject(LOCALE_ID) private locale: string) { }
+
+  ngOnInit() {
+    
+  }
 }
+
