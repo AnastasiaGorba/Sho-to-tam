@@ -1,5 +1,7 @@
 import { Component, LOCALE_ID, Inject, OnInit } from '@angular/core';
 import { formatDate } from '@angular/common';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -12,10 +14,24 @@ export class SearchComponent implements OnInit{
     {namem: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'}
   ];
 
-  constructor(@Inject(LOCALE_ID) private locale: string) { }
+  namem: string = '';
+  room: number | null = null;
+  errorMessage: string = ''; 
+
+  constructor(@Inject(LOCALE_ID) private locale: string, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     
   }
-}
+  onSubmit(): void {
+    if (!this.namem && !this.room) {
+      this.errorMessage = '*Будь ласка, заповніть всі поля'; 
+      return;
+    }
+    this.router.navigateByUrl('/search');
+  }
 
+  redirectToSearch(): void {
+    this.router.navigateByUrl('/search');
+  }
+}

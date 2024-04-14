@@ -72,7 +72,7 @@
 .rectangle-frame1 {
     float: right;
     width: 565px;
-    height: 476px;
+    height: 500px;
     border-radius: 5px;
     background-color: #b0d7fc; 
     padding-left: 8px;
@@ -90,7 +90,7 @@
     font-weight: 700;
 }
 
-input[type="text"] {
+input[type="text"], input[type="time"], input[type="number"] {
     width: 90%; 
     margin-bottom: 25px;
     margin-left: 20px;
@@ -102,9 +102,23 @@ input[type="text"] {
     background-color: #b0d7fc;
 }  
 
-input[type="text"]:focus {
+input[type="text"], input[type="time"], input[type="number"]:focus {
     outline: none;
 }
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+} 
+
+input[type="time"]::before {
+    content: 'Введіть годину';
+    color: #6b6767; 
+}
+
+input[type="time"]:focus::before {
+    content: '';
+}
+
 
 .bg {
     background-color: #000000;
@@ -136,3 +150,11 @@ input[type="text"]:focus {
     color: gray;
 }
 
+.error{
+    color: gray; 
+    font-size: 13px; 
+    font-weight: 500;
+    margin-top: -20px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}

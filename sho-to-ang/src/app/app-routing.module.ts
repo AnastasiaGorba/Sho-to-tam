@@ -7,6 +7,7 @@ import { PrhComponent } from './prh/prh.component';
 import { SearchComponent } from './search/search.component';
 import { NewguestComponent } from './newguest/newguest.component';
 import { SignComponent } from './sign/sign.component';  
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), FormsModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
