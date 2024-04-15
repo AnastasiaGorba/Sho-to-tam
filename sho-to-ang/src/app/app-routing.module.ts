@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
-  {path: "", redirectTo: "/home", pathMatch: "full"},
+  {path: "", redirectTo: "/sign", pathMatch: "full"},
   {path: "home", component: HomeComponent},
   {path: "data", component: DataComponent},
   {path: "guest", component: GuestComponent},

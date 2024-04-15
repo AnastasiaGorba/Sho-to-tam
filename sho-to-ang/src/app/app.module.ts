@@ -13,8 +13,8 @@ import { SearchComponent } from './search/search.component';
 import { NewguestComponent } from './newguest/newguest.component';
 import { SignComponent } from './sign/sign.component';
 import { RouterModule } from '@angular/router';
-import { AuthService } from './auth.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule, 
     AppRoutingModule
   ],
-  providers: [AuthService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

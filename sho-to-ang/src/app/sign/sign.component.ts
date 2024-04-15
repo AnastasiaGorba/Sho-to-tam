@@ -1,25 +1,34 @@
-import { Component } from '@angular/core';
-import { AuthService } from '../auth.service';
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 
 @Component({
-selector: 'app-sign',
-templateUrl: './sign.component.html',
-styleUrl: './sign.component.css'
+  selector: 'app-sign',
+  templateUrl: './sign.component.html',
+  styleUrls: ['./sign.component.css']
 })
-export class SignComponent {
-  identificationCode: string = '';
-  email: string = '';
-  errorMessage: string = ''; // змінна для відображення помилок
+export class SignComponent implements OnInit {
+  signForm!: FormGroup;
+  errorMessage: string = '';
 
-  constructor(private authService: AuthService) { } // Впровадження AuthService в компонент
+  constructor(
+    private router: Router,
+    private authService: AuthService
+  ) {}
 
-  onSubmit(): void {
-    // Виконуємо перевірку введених даних перед відправкою на сервер
-    if (!this.email || !this.identificationCode) {
-      this.errorMessage = '*Будь ласка, заповніть всі поля'; // Відображаємо повідомлення про неповність даних
-      return;
-    }
+  submitLogin() {
+    this.authService.login(this.signForm.value).subscribe({
+      next: () => this.router.navigate(['home']),
+      error: (err) => alert(err.message)
+    });
+  }
+
+  ngOnInit(): void {
+    this.signForm = new FormGroup({
+      'email': new FormControl('', [Validators.required, Validators.email]),
+      'identificationCode': new FormControl('', [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)])
+    });
   }
 }
 
