@@ -29,6 +29,9 @@ export class SignComponent implements OnInit {
       'email': new FormControl('', [Validators.required, Validators.email]),
       'identificationCode': new FormControl('', [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)])
     });
+    if (this.authService.isLoggedIn()) {
+      this.router.navigate(['home'])
+    }
   }
 }
 

@@ -8,17 +8,17 @@ import { SearchComponent } from './search/search.component';
 import { NewguestComponent } from './newguest/newguest.component';
 import { SignComponent } from './sign/sign.component';  
 import { FormsModule } from '@angular/forms';
-
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  {path: "", redirectTo: "/sign", pathMatch: "full"},
-  {path: "home", component: HomeComponent},
+  {path: "home", component: HomeComponent, canActivate: [AuthGuard], canDeactivate: [AuthGuard]},
   {path: "data", component: DataComponent},
   {path: "guest", component: GuestComponent},
   {path: "prh", component: PrhComponent},
   {path: "search", component: SearchComponent},
   {path: "newguest", component: NewguestComponent},
-  {path: "sign", component: SignComponent}
+  {path: "sign", component: SignComponent},
+  {path: "", redirectTo: "sign", pathMatch: "full"}
 ];
 
 @NgModule({

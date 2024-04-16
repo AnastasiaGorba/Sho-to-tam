@@ -28,5 +28,9 @@ export class AuthService {
     }
     return throwError(() => new Error('Неправильний пароль!'));
   }
+
+  logout(){
+    this.router.navigate(['sign'])
+  }
 }
 
