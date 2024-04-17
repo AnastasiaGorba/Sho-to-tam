@@ -1,4 +1,8 @@
-import { Component, LOCALE_ID, Inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Auth2Service } from '../services/auth2.service';
+import { LOCALE_ID, Inject} from '@angular/core';
 import { formatDate } from '@angular/common';
 
 @Component({
@@ -6,34 +10,36 @@ import { formatDate } from '@angular/common';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit{
+export class SearchComponent implements OnInit {
   message3: string = formatDate(new Date(), 'dd.MM.y', this.locale);
   data = [
     {namem: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'}
   ];
 
-  constructor(@Inject(LOCALE_ID) private locale: string){}
+  searchForm!: FormGroup;
+  errorMessage: string = '';
 
-  ngOnInit() { }
+  constructor(
+    private router: Router,
+    private auth2Service: Auth2Service,
+    @Inject(LOCALE_ID) private locale: string
+  ) {}
 
-  // namem: string = '';
-  // room: number | null = null;
-  // errorMessage: string = ''; 
+  submitSearch() {
+    this.auth2Service.search(this.searchForm.value).subscribe({
+      next: () => this.router.navigate(['prh']),
+      error: (err) => {
+        console.error(err);
+        this.errorMessage = 'Такого мешканця не знайдено!'; // Устанавливаем значение errorMessage при ошибке
+      }
+    });
+  }
 
-  // constructor(@Inject(LOCALE_ID) private locale: string, private authService: AuthService, private router: Router) { }
-
-  // ngOnInit() {
-    
-  // }
-  // onSubmit(): void {
-  //   if (!this.namem && !this.room) {
-  //     this.errorMessage = '*Будь ласка, заповніть всі поля'; 
-  //     return;
-  //   }
-  //   this.router.navigateByUrl('/search');
-  // }
-
-  // redirectToSearch(): void {
-  //   this.router.navigateByUrl('/search');
-  // }
+  ngOnInit(): void {
+    this.searchForm = new FormGroup({
+      'namem': new FormControl('', [Validators.required]),
+      'ID': new FormControl('', [Validators.required]),
+      'room': new FormControl('', [Validators.required])
+    });
+  }
 }

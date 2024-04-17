@@ -12,10 +12,7 @@ export class SignComponent implements OnInit {
   signForm!: FormGroup;
   errorMessage: string = '';
 
-  constructor(
-    private router: Router,
-    private authService: AuthService
-  ) {}
+  constructor( private router: Router, private authService: AuthService) {}
 
   submitLogin() {
     this.authService.login(this.signForm.value).subscribe({

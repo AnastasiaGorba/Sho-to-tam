@@ -11,11 +11,5 @@ import { Injectable } from '@angular/core';
 
 export class MenuComponent{
 
-  constructor(private authService: AuthService) {} 
-  ngOnInit(): void {} 
-  logout() {
-  this.authService.logout()
-  }
-
 }
 

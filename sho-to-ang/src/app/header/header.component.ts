@@ -10,11 +10,4 @@ import { Injectable } from '@angular/core';
 })
 
 export class HeaderComponent{
-
-  constructor(private authService: AuthService) {} 
-  ngOnInit(): void {} 
-  logout() {
-    this.authService.logout()
-  }
-
 }
