@@ -17,7 +17,10 @@ export class SignComponent implements OnInit {
   submitLogin() {
     this.authService.login(this.signForm.value).subscribe({
       next: () => this.router.navigate(['home']),
-      error: (err) => alert(err.message)
+      error: (err) => {
+        console.error(err);
+        this.errorMessage = 'Неправильний пароль!'; 
+      }
     });
   }
 

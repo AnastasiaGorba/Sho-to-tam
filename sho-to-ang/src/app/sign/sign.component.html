@@ -10,7 +10,9 @@
         <label class="form-label" for="identificationCode">Пароль:</label> 
         <input formControlName="identificationCode" type="text" id="identificationCode" name="identificationCode"> 
         <p *ngIf="signForm.get('identificationCode')?.invalid && signForm.get('identificationCode')?.touched"><small class="text-danger">Пароль має бути не менше 8 символів!</small></p> 
-
+        <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
         <button type="submit">Вхід</button>
     </form>
+    
 </div>
+

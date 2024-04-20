@@ -70,8 +70,6 @@
 
 .rectangle-frame1 {
     float: right;
-    width: 565px;
-    height: 500px;
     border-radius: 5px;
     background-color: #b0d7fc; 
     padding-left: 10px;
@@ -79,6 +77,16 @@
     border: 2px solid #BBDEFF; 
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 } 
+
+.normal-size {
+    min-width: 300px; 
+    min-height: 300px; 
+}
+
+.expanded-size {
+    min-width: 400px; 
+    min-height: 400px; 
+}
 
 .text_p{
     margin-top: 50px;
@@ -130,7 +138,6 @@ input[type="time"]:focus::before {
     content: '';
 }
 
-
 .bg {
     background-color: #000000;
     font-size: 16px;
@@ -144,28 +151,14 @@ input[type="time"]:focus::before {
     margin-left: 180px;
     color: white;
 }
-
-.bg {
-    background-color: #000000;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 7px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 15px;
-    width: 170px; 
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-    margin-left: 180px;
-}
-
 
 .link {
     text-decoration: none; 
     color: white;
 }
 
-
 /* ////////////////////////////////////////// */
+
 .pagination {
     justify-content: center;
     margin-top: 20px;
@@ -190,10 +183,16 @@ input[type="time"]:focus::before {
     margin-bottom: 20px;
 }
 
+.text-danger{
+    color: rgb(226, 58, 58);
+    margin-top: 25px;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
 .error-message {
-    color: red;
-    margin-top: 5px;
-    font-size: 14px; 
-    font-weight: 600;
-    padding-top: 17px;
+    color: rgb(226, 58, 58);
+    margin-top: 25px;
+    font-size: 13px;
+    padding-left: 20px;
 }

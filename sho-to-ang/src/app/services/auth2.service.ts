@@ -26,6 +26,6 @@ export class Auth2Service {
       this.setToken('');
       return of(true);
     }
-    return throwError(() => new Error('Такого мешканця немає!'));
+    return throwError(() => new Error(''));
   }
 }

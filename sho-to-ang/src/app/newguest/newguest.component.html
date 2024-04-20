@@ -50,20 +50,37 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="rectangle-frame1">
+                <div [ngClass]="{'rectangle-frame1': true, 'normal-size': !guestForm.value || guestForm.invalid, 'expanded-size': guestForm.value && !guestForm.invalid}">
                     <div class="text_p">
                         Внесення нового гостя
                     </div>	
-                    <!-- <form (ngSubmit)="onSubmit()">
-                        <input type="text" name="nameg" required [(ngModel)]="nameg" placeholder="Введіть ім'я та прізвище гостя">
-                        <input type="text" name="namem" required [(ngModel)]="namem" placeholder="Введіть ім'я та прізвище мешканця">	
-                        <input type="number" name="room" min="101" required [(ngModel)]="room"  placeholder="Введіть номер кімнати">
-                        <input type="text" name="id" required [(ngModel)]="id" placeholder="Введіть ID мешканця">
-                        <input type="time" name="namem" required [(ngModel)]="time" placeholder="Введіть годину">
-                        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
-                        <button type="submit" class="bg">Готово</button>
-                    </form> -->
-                                    
+    
+                    <form [formGroup]="guestForm" (ngSubmit)="submitGuest()">
+                    
+                        <label class="form-label" for="nameg">Введіть ім'я та прізвище гостя:</label>
+                        <input formControlName="nameg" type="text" id="nameg" name="nameg"/>
+                        <p *ngIf="guestForm.get('nameg')?.invalid && guestForm.get('nameg')?.dirty"><small class="text-danger">Введіть ім'я ще раз!</small></p> 
+    
+                        <label class="form-label" for="namem">Введіть ім'я та прізвище мешканця:</label>
+                        <input formControlName="namem" type="text" id="namem" name="namem"/>
+                        <p *ngIf="guestForm.get('namem')?.invalid && guestForm.get('namem')?.dirty"><small class="text-danger">Введіть ім'я ще раз!</small></p> 
+
+                        <label class="form-label" for="room">Введіть кімнату:</label> 
+                        <input formControlName="room" type="number" id="room" name="room"> 
+                        <p *ngIf="guestForm.get('room')?.invalid && guestForm.get('room')?.dirty"><small class="text-danger">Введіть кімнату ще раз!</small></p> 
+    
+                        <label class="form-label" for="ID">Введіть ідентифікаційний код мешканця:</label> 
+                        <input formControlName="ID" type="text" id="ID" name="ID"> 
+                        <p *ngIf="guestForm.get('ID')?.invalid && guestForm.get('ID')?.dirty"><small class="text-danger">Введіть ідентифікаційний код ще раз!</small></p>
+                        
+                        <label class="form-label" for="time">Введіть годину відвідування:</label> 
+                        <input formControlName="time" type="text" id="time" name="room"> 
+                        <p *ngIf="guestForm.get('room')?.invalid && guestForm.get('room')?.dirty"><small class="text-danger">Введіть годину відвідування ще раз!</small></p>
+                        
+                        <button class="bg">Знайти</button>
+                        
+                    </form>
+                                 
                 </div>
             </div>
         </div> 

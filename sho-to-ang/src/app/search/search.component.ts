@@ -30,7 +30,7 @@ export class SearchComponent implements OnInit {
       next: () => this.router.navigate(['prh']),
       error: (err) => {
         console.error(err);
-        this.errorMessage = 'Такого мешканця не знайдено!'; // Устанавливаем значение errorMessage при ошибке
+        this.errorMessage = 'Такого мешканця не знайдено!'; 
       }
     });
   }

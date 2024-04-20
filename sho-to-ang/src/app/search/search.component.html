@@ -3,7 +3,6 @@
     
     <div class="text1">
     Станом на {{message3}} рік, у гуртожитку проживає 1024 людини
-    <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
     </div>	
     
     <div class="t">
@@ -51,30 +50,28 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="rectangle-frame1">
+                <div [ngClass]="{'rectangle-frame1': true, 'normal-size': !searchForm.value || searchForm.invalid, 'expanded-size': searchForm.value && !searchForm.invalid}">
                     <div class="text_p">
                         Пошук мешканця
                     </div>	
-                 
-                    
                 <form [formGroup]="searchForm" (ngSubmit)="submitSearch()">
                     
                     <label class="form-label" for="namem">Введіть ім'я та прізвище:</label>
                     <input formControlName="namem" type="text" id="namem" name="namem"/>
-                    <p *ngIf="searchForm.get('namem')?.invalid && searchForm.get('namem')?.dirty"><small class="text-danger"><b>Введіть ім'я ще раз!</b></small></p> 
+                    <p *ngIf="searchForm.get('namem')?.invalid && searchForm.get('namem')?.dirty"><small class="text-danger">Введіть ім'я ще раз!</small></p> 
 
                     <label class="form-label" for="ID">Введіть ідентифікаційний код:</label> 
                     <input formControlName="ID" type="text" id="ID" name="ID"> 
-                    <p *ngIf="searchForm.get('ID')?.invalid && searchForm.get('ID')?.dirty"><small class="text-danger"><b>Введіть ідентифікаційний код ще раз!</b></small></p>
+                    <p *ngIf="searchForm.get('ID')?.invalid && searchForm.get('ID')?.dirty"><small class="text-danger">Введіть ідентифікаційний код ще раз!</small></p>
                     
                     <label class="form-label" for="room">Введіть кімнату:</label> 
                     <input formControlName="room" type="number" id="room" name="room"> 
-                    <p *ngIf="searchForm.get('room')?.invalid && searchForm.get('room')?.dirty"><small class="text-danger"><b>Введіть кімнату ще раз!</b></small></p> 
+                    <p *ngIf="searchForm.get('room')?.invalid && searchForm.get('room')?.dirty"><small class="text-danger">Введіть кімнату ще раз!</small></p> 
                    
                     <button class="bg">Знайти</button>
                     
                 </form>
-
+                <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
                 </div>
             </div>
         </div> 

@@ -1,3 +1,4 @@
+import { Time } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, of, throwError } from 'rxjs';
@@ -5,7 +6,7 @@ import { Observable, of, throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class Auth3Service {
 
   constructor(private router: Router) { }
 
@@ -21,16 +22,11 @@ export class AuthService {
     return this.getToken() !== null;
   }
 
-  login(userInfo: { email: string, identificationCode: string }): Observable<boolean> {
-    if (userInfo.email === 'admin.admin.ad.2022@lpnu.ua' && userInfo.identificationCode === 'admin123') {
-      this.setToken('bvfhbvuehbvioleshfioveawhvoeir');
+  guest(userInfo: {nameg: string, namem: string, room: number, ID: string, time: string}): Observable<boolean> {
+    if (userInfo.nameg === 'Батоненко Батон Батонович' && userInfo.namem === 'Батоненко Батон Батонович' && userInfo.room === 535 && userInfo.ID === 'КT 18769624' && userInfo.time === '18:15' ) {
+      this.setToken('');
       return of(true);
     }
     return throwError(() => new Error(''));
   }
-
-  logout(){
-    this.router.navigate(['sign'])
-  }
 }
-
