@@ -4,39 +4,45 @@
         <div class="row">
         
             <div class="col-md-6">
-                <a routerLink="/data"><button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
-                    <h4>База даних мешканців</h4>
-                </button></a>
+                <a routerLink="/data">
+                    <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
+                        <h4>База даних мешканців</h4>
+                    </button>
+                </a>
             </div>
                 
             <div class="col-md-6">
-                <a routerLink="/guest"><button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
-                    <h4>Гості</h4>
-                </button></a>
+                <a routerLink="/guest">
+                    <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
+                        <h4>Гості</h4>
+                    </button>
+                </a>
             </div>
 
         </div>
     </div>
-
 
 
     <div class="container">
         <div class="row">
         
             <div class="col-md-6">
-            <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
-                <h4>Заяви</h4>
-            </button>
+                <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()" (click)="sendEmail()">
+                    <h4>Заяви</h4>
+                </button>
             </div>
             
+            
             <div class="col-md-6">
-                <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
-                <h4>Сканер</h4>
-            </button>
+                <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()" (click)="startCamera()">
+                    <h4>Сканер</h4>
+                </button>
+                <!-- <button class="container1" (click)="stopCamera()">
+                    <h4>Стоп</h4>
+                </button> -->
             </div>
         
         </div>
     </div>
     
 </div>
-
