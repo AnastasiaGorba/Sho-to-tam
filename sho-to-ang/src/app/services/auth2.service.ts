@@ -21,8 +21,8 @@ export class Auth2Service {
     return this.getToken() !== null;
   }
 
-  search(userInfo: {namem: string, ID: string, room: number}): Observable<boolean> {
-    if (userInfo.namem === 'Батоненко Батон Батонович' || userInfo.ID === 'КT 18769624' || userInfo.room === 535) {
+  search(userInfo: {name: string, ID: string, room: number}): Observable<boolean> {
+    if (userInfo.name === 'Імя Прізвище' || userInfo.ID === 'КT 18769624' || userInfo.room === 535) {
       this.setToken('');
       return of(true);
     }

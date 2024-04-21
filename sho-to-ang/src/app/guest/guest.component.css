@@ -6,6 +6,7 @@
     position: fixed; 
     top: 70px; 
     overflow-y: auto;
+    padding-bottom: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -86,22 +87,35 @@
 }
 
 .pagination {
-    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     justify-content: center;
+    width: 100%;
+    z-index: 999;
+    margin-top: 50px; 
+    height: 40px;
+    padding-top: 20px;
 }
 
+.page-item {
+    display: inline-block; 
+}
 
 .page-link {
-    color: gray; 
-    font-size: 13px; 
+    color: gray;
+    font-size: 13px;
     font-weight: 500;
     background-color: #eefbff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 2px;
 }
 
 .page-link:hover {
     color: gray;
+    text-decoration: none;
+    background-color: #d6e6ff;
 }
-
-
-
-  

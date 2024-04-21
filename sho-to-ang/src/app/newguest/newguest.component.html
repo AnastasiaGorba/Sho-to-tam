@@ -2,7 +2,7 @@
 <div class="main">
     
     <div class="text1">
-    Станом на {{message2}} рік, у гуртожитку 16 гостей
+    Станом на {{ message2 }} рік, у гуртожитку 16 гостей
     </div>	
         
     <div class="t">
@@ -29,19 +29,17 @@
                 </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let item of data; let i = index  ">
-                <td>{{i+1}}</td>
-                <td>{{item.nameg}}</td>
-                <td>{{item.room}}</td>
-                <td><a routerLink="/prh" class="text-decoration-none">
-                    {{item.namem}}
-                </a></td>
-                <td>{{item.id}}</td>
-                <td>{{item.time}}</td>
-                <td><a href="#" class="text-decoration-none">
-                    Видалити
-                </a></td>
-            </tr>
+                <tr *ngFor="let item of getCurrentPageData(); let i = index">
+                  <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+                  <td>{{ item.nameg }}</td>
+                  <td>{{ item.room }}</td>
+                  <td>
+                    <a routerLink="/prh" class="text-decoration-none">{{ item.namem }}</a>
+                  </td>
+                  <td>{{ item.id }}</td>
+                  <td>{{ item.time }}</td>
+                  <td><a href="#" class="text-decoration-none">Видалити</a></td>
+                </tr>
             </tbody>
         </table> 
     </div>
@@ -74,10 +72,10 @@
                         <p *ngIf="guestForm.get('ID')?.invalid && guestForm.get('ID')?.dirty"><small class="text-danger">Введіть ідентифікаційний код ще раз!</small></p>
                         
                         <label class="form-label" for="time">Введіть годину відвідування:</label> 
-                        <input formControlName="time" type="text" id="time" name="room"> 
-                        <p *ngIf="guestForm.get('room')?.invalid && guestForm.get('room')?.dirty"><small class="text-danger">Введіть годину відвідування ще раз!</small></p>
+                        <input formControlName="time" type="text" id="time" name="time"> 
+                        <p *ngIf="guestForm.get('time')?.invalid && guestForm.get('time')?.dirty"><small class="text-danger">Введіть годину відвідування ще раз!</small></p>
                         
-                        <button class="bg">Знайти</button>
+                        <button class="bg">Готово</button>
                         
                     </form>
                                  
@@ -85,24 +83,14 @@
             </div>
         </div> 
     </div>
-    
-  
+
     <nav aria-label="Page navigation example">
         <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" routerLink="/data" aria-label="Назад">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" routerLink="/data">1</a></li>
-          <li class="page-item"><a class="page-link" routerLink="/data">2</a></li>
-          <li class="page-item"><a class="page-link" routerLink="/data">3</a></li>
-          <li class="page-item">
-            <a class="page-link" routerLink="/data" aria-label="Далі">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
+          <li class="page-item" *ngFor="let page of getTotalPages()">
+            <a class="page-link" href="javascript:void(0)" (click)="setPage(page)" [class.active]="page === currentPage">{{ page }}</a>
           </li>
         </ul>
-      </nav>  
+    </nav>
+      
 </div>
 
