@@ -23,7 +23,7 @@ export class Auth3Service {
   }
 
   guest(userInfo: {nameg: string, namem: string, room: number, ID: string, time: string}): Observable<boolean> {
-    if (userInfo.nameg === 'Батоненко Батон Батонович' && userInfo.namem === 'Батоненко Батон Батонович' && userInfo.room === 535 && userInfo.ID === 'КT 18769624' && userInfo.time === '18:15' ) {
+    if (userInfo.nameg === '' && userInfo.namem === '' && userInfo.room === 0 && userInfo.ID === '' && userInfo.time === '' ) {
       this.setToken('');
       return of(true);
     }

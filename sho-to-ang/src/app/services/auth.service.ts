@@ -22,8 +22,8 @@ export class AuthService {
   }
 
   login(userInfo: { email: string, identificationCode: string }): Observable<boolean> {
-    if (userInfo.email === 'admin.admin.ad.2022@lpnu.ua' && userInfo.identificationCode === 'admin123') {
-      this.setToken('bvfhbvuehbvioleshfioveawhvoeir');
+    if (userInfo.email === '' && userInfo.identificationCode === '') {
+      this.setToken('');
       return of(true);
     }
     return throwError(() => new Error(''));

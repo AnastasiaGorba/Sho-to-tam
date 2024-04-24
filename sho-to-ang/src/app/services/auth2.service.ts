@@ -22,7 +22,7 @@ export class Auth2Service {
   }
 
   search(userInfo: {name: string, ID: string, room: number}): Observable<boolean> {
-    if (userInfo.name === 'Імя Прізвище' || userInfo.ID === 'КT 18769624' || userInfo.room === 535) {
+    if (userInfo.name === '' || userInfo.ID === '' || userInfo.room === 0) {
       this.setToken('');
       return of(true);
     }

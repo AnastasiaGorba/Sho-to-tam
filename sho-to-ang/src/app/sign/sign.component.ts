@@ -15,13 +15,13 @@ export class SignComponent implements OnInit {
   constructor( private router: Router, private authService: AuthService) {}
 
   submitLogin() {
-    this.authService.login(this.signForm.value).subscribe({
+  this.authService.login(this.signForm.value).subscribe({
       next: () => this.router.navigate(['home']),
       error: (err) => {
-        console.error(err);
-        this.errorMessage = 'Неправильний пароль!'; 
+      console.error(err);
+      this.errorMessage = 'Неправильний пароль!'; 
       }
-    });
+     });
   }
 
   ngOnInit(): void {
@@ -30,7 +30,7 @@ export class SignComponent implements OnInit {
       'identificationCode': new FormControl('', [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)])
     });
     if (this.authService.isLoggedIn()) {
-      this.router.navigate(['home'])
+      this.router.navigate(['sign'])
     }
   }
 }

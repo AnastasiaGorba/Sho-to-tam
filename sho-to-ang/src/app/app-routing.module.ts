@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  {path: "home", component: HomeComponent, canActivate: [AuthGuard], canDeactivate: [AuthGuard]},
+  {path: "home", component: HomeComponent},
   {path: "data", component: DataComponent},
   {path: "guest", component: GuestComponent},
   {path: "prh", component: PrhComponent},
