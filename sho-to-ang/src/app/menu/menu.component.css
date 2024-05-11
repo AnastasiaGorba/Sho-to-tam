@@ -75,3 +75,30 @@ p{
 .dropstart b {
     margin-right: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    }
+    .logo {
+        display: none;
+    }
+    .rectangle-frame5 {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+    .rectangle-frame5 .myButton {
+        padding: 8px 10px; 
+    }
+    .header_user {
+        margin-right: 10px;
+    }
+    .dropdown {
+        display: none;
+    }
+}
+

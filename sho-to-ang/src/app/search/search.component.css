@@ -1,5 +1,4 @@
 *{font-family: 'Noto Sans';}
-
 .main {
     background-color: #eefbff;
     width: 100%;
@@ -11,63 +10,57 @@
 
 @media screen and (max-width: 768px) {
     .main {
-        height: calc(100% - 50px); 
+        height: calc (100%-50px);
+        width: 100%;
     }
 }
-
 /* --------------------------------------------------- */
 
-.text1{
-    height: 80px;
-    width: 1300px;
-    margin-left: 53px;
-    padding-top: 30px;
-    font-size: 18px; 
+.text1 {
+    width: 92%;
+    margin-left: 45px; 
+    padding-top: 10px;
+    font-size: 18px;
     font-weight: 700;
+    text-align: left;
+    margin-bottom: 35px;
+    margin-top: 20px;
 }
 
 /* --------------------------------------------------- */
 
 .clickable-table {
-    float: left;
-    width: 800px;
-    margin-left: 45px;
+    width: 55%;
     border-radius: 5px;
     overflow: hidden;
     background-color: #eefbff;
     font-weight: 700;
     font-size: 16px;
-    margin-bottom: 25px;
     border: none;
+    float: left;
+    margin-left: 45px; 
 }
   
-.clickable-table td {
-    padding: 15px;
+.clickable-table td, .clickable-table th {
+    padding: 10px; 
     text-align: center;
-    border-bottom: 2px solid #BBDEFF;
-    width: 25px;
-    height: 60px;
+    border-bottom: 1px solid lightgray;
 }
   
 .clickable-table th {
     background-color: #BBDEFF;
-    text-align: center;
     color: #837979;
-    width: 25px;
-
 }
-
+  
 .clickable-table tbody tr:hover {
     background-color: #BBDEFF;
-    transition: background-color 0.3s;
 }
-
-.text-decoration-none{
-    color:black;
+  
+.text-decoration-none {
+    color: black;
 }
 
 /* ////////////////////////////////////////////////////////// */
-
 .rectangle-frame1 {
     float: right;
     border-radius: 5px;
@@ -84,7 +77,6 @@
 }
 
 .expanded-size {
-    min-width: 400px; 
     min-height: 400px; 
 }
 .normal-size {
@@ -219,7 +211,7 @@ input[type="time"]:focus::before {
 
 .error-message {
     color: rgb(226, 58, 58);
-    margin-bottom: 20px;
+    margin-top: 25px;
     font-size: 13px;
     padding-left: 20px;
 }

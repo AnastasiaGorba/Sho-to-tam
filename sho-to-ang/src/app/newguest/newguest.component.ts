@@ -34,7 +34,7 @@ export class NewguestComponent implements OnInit {
   errorMessage: string = '';
 
   currentPage: number = 1;
-  itemsPerPage: number = 8;
+  itemsPerPage: number = 10;
 
   constructor(
     private router: Router,

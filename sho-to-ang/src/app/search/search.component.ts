@@ -34,7 +34,7 @@ export class SearchComponent implements OnInit {
   ];
 
   currentPage: number = 1;
-  itemsPerPage: number = 8;
+  itemsPerPage: number = 10;
 
   searchForm!: FormGroup;
   errorMessage: string = '';

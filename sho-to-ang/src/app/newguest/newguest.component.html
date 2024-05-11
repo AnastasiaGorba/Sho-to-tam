@@ -3,7 +3,7 @@
     
     <div class="text1">
     Станом на {{ message2 }} рік, у гуртожитку 16 гостей
-    </div>	
+    </div>
         
     <div class="t">
         <table class="clickable-table">
@@ -63,17 +63,9 @@
                         <input formControlName="namem" type="text" id="namem" name="namem"/>
                         <p *ngIf="guestForm.get('namem')?.invalid && guestForm.get('namem')?.dirty"><small class="text-danger">Введіть ім'я ще раз!</small></p> 
 
-                        <label class="form-label" for="room">Введіть кімнату:</label> 
-                        <input formControlName="room" type="number" id="room" name="room"> 
-                        <p *ngIf="guestForm.get('room')?.invalid && guestForm.get('room')?.dirty"><small class="text-danger">Введіть кімнату ще раз!</small></p> 
-    
-                        <label class="form-label" for="ID">Введіть ідентифікаційний код мешканця:</label> 
+                        <label class="form-label" for="ID">Введіть номер телефона гостя:</label> 
                         <input formControlName="ID" type="text" id="ID" name="ID"> 
-                        <p *ngIf="guestForm.get('ID')?.invalid && guestForm.get('ID')?.dirty"><small class="text-danger">Введіть ідентифікаційний код ще раз!</small></p>
-                        
-                        <label class="form-label" for="time">Введіть годину відвідування:</label> 
-                        <input formControlName="time" type="text" id="time" name="time"> 
-                        <p *ngIf="guestForm.get('time')?.invalid && guestForm.get('time')?.dirty"><small class="text-danger">Введіть годину відвідування ще раз!</small></p>
+                        <p *ngIf="guestForm.get('ID')?.invalid && guestForm.get('ID')?.dirty"><small class="text-danger">Введіть номер телефона ще раз!</small></p>
                         
                         <button class="bg">Готово</button>
                         

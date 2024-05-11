@@ -21,17 +21,11 @@ export class DataComponent implements OnInit {
     { name: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'},
     { name: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'},
     { name: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'},
-    { name: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'},
-    { name: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'},
-    { name: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'},
-    { name: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'},
-    { name: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'},
     { name: 'John Smith', room: 104, ID: 'KL45864', debt: 'Так', presence: 'Так'}
   ];
 
   currentPage: number = 1;
-  itemsPerPage: number = 8;
-
+  itemsPerPage: number = 10;
 
   constructor(@Inject(LOCALE_ID) private locale: string) { }
 
@@ -51,4 +45,5 @@ export class DataComponent implements OnInit {
     const pageCount = Math.ceil(this.data.length / this.itemsPerPage);
     return Array.from({ length: pageCount }, (_, i) => i + 1);
   }
+
 }

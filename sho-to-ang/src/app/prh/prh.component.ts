@@ -30,7 +30,7 @@ export class PrhComponent implements OnInit{
   ];
 
   currentPage: number = 1;
-  itemsPerPage: number = 8;
+  itemsPerPage: number = 10;
 
   constructor(@Inject(LOCALE_ID) private locale: string) { }
 
