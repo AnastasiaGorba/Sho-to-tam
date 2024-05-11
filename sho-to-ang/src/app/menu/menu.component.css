@@ -49,7 +49,7 @@ header {
 
 .header_user{
     float:right;
-    margin-right: 30px;
+    margin-right: 45px;
     padding: 20px; 
     margin-top: -10px;
 }
@@ -99,6 +99,12 @@ p{
     }
     .dropdown {
         display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .rectangle-frame5 .myButton {
+        padding: 6px 10px; /* Adjust padding for smaller screens */
     }
 }
 

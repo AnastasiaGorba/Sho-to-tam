@@ -27,7 +27,7 @@ export class GuestComponent implements OnInit {
   ];
 
   currentPage: number = 1;
-  itemsPerPage: number = 10;
+  itemsPerPage: number = 9;
   constructor(@Inject(LOCALE_ID) private locale: string) {}
 
   ngOnInit() {}
