@@ -1,35 +1,32 @@
 header {
     position: fixed;
+    top: 0; /* установите верхнюю границу контейнера вверху страницы */
     background-color: #BBDEFF;
     width: 100%;
     height: 70px;
+    z-index: 1000; /* установите z-index, чтобы контейнер header был поверх остального контента */
 }
 
-
-@media screen and (max-width: 768px) {
-    .header {
-        height: 14%; 
-        background-color: #BBDEFF;
-    }
+.main {
+    margin-top: 70px; /* компенсируем высоту header, чтобы содержимое не скрывалось за ним */
 }
 
 .logo{
-    float: left;
-    margin-left: 50px;
+    margin-left: -35px;
     margin-top: 10px;
     height: 70px;
     width: 210px;
 }
 
-.rectangle-frame5 {
-    position: fixed;
-    width: 20%;
+.rectangle-frame {
     background-color: #BBDEFF;
-    margin-left: 250px;
+    height: 70px; 
     display: flex;
+    align-items: center; 
+    margin-left: -75px; 
 }
 
-.rectangle-frame5 .myButton {
+.rectangle-frame .myButton {
     background-color: #BBDEFF; 
     border: none;
     text-align: center;
@@ -39,19 +36,20 @@ header {
     cursor: pointer;
     color: black;
     width: 100px;
-    margin-left: 53px;
-    margin-top: 25px;
+    margin-left: 40px;
 }
 
-.rectangle-frame5 .myButton:hover {
+.rectangle-frame .myButton:hover {
     text-decoration: underline; 
 }
 
 .header_user{
-    float:right;
-    margin-right: 45px;
-    padding: 20px; 
-    margin-top: -10px;
+    position: absolute; /* используйте absolute вместо float:right */
+    right: 60px; 
+    top: 0; /* установите верхнюю границу контейнера вверху страницы */
+    height: 70px; /* установите высоту, чтобы соответствовать header */
+    display: flex;
+    align-items: center; /* выравнивание по вертикали */
 }
 
 .dropdown {
@@ -63,7 +61,6 @@ header {
     margin: 0; 
     font-size: 12px; 
     color: #837979; 
-    /* margin-bottom: 0px; */
 }
 
 p{
@@ -75,36 +72,3 @@ p{
 .dropstart b {
     margin-right: 10px;
 }
-
-@media screen and (max-width: 768px) {
-    header {
-        height: 70px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; 
-    }
-    .logo {
-        display: none;
-    }
-    .rectangle-frame5 {
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-    }
-    .rectangle-frame5 .myButton {
-        padding: 8px 10px; 
-    }
-    .header_user {
-        margin-right: 10px;
-    }
-    .dropdown {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .rectangle-frame5 .myButton {
-        padding: 6px 10px; /* Adjust padding for smaller screens */
-    }
-}
-

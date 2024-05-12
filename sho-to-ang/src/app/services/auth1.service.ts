@@ -5,7 +5,7 @@ import { Observable, of, throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class Auth2Service {
+export class Auth1Service {
 
   constructor(private router: Router) { }
 

@@ -1,8 +1,8 @@
 * {
     font-family: 'Noto Sans';
-  }
+}
   
-  .main {
+.main {
     background-color: #eefbff;
     width: 100%;
     height: calc(100% - 70px);
@@ -10,120 +10,7 @@
     top: 70px;
     overflow-y: auto;
     padding-bottom: 30px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .main {
-      height: calc (100%-50px);
-      width: 100%;
-    }
-    .text1 {
-      padding: 0 0 10px 0; 
-      margin-left: 0px; 
-    }
-    .bg {
-      padding: 0 0; 
-      margin-left: 50px; 
-    }
-  }
-  
-  .text1 {
-    width: 92%;
-    margin-left: 45px; 
-    padding-top: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    text-align: left;
-    margin-bottom: 35px;
-    margin-top: 20px;
-  }
-  
-  .bg {
-    background-color: #BBDEFF;
-    font-size: 16px;
-    font-weight: 700;
-    color: black;
-    padding: 5px 20px;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-    border: 1px solid lightgray;
-    transition: background-color 0.3s;
-    float: right;
-    margin-bottom: 15px;
-    /* margin-right: -50px; */
-    width: 180px;
-  }
-  
-  .bg:hover {
-    background: linear-gradient(to bottom, #85c5ff, #cdd9ff, #ffff);
-  }
-  /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-  .clickable-table {
-    width: 94%; 
-    margin: 0 auto;
-    border-radius: 5px;
-    overflow: hidden;
-    background-color: #eefbff;
-    font-weight: 700;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .clickable-table td, .clickable-table th {
-    padding: 10px; 
-    text-align: center;
-    border-bottom: 1px solid lightgray;
-  }
-  
-  .clickable-table th {
-    background-color: #BBDEFF;
-    color: #837979;
-  }
-  
-  .clickable-table tbody tr:hover {
-    background-color: #BBDEFF;
-  }
-  
-  .text-decoration-none {
-    color: black;
-  }
-  
-  /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-  
-  .pagination {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: center;
-    width: 100%;
-    z-index: 999;
-    margin-top: 50px;
-    height: 40px;
-    padding-top: 20px;
-  }
-  
-  .page-item {
-    display: inline-block;
-  }
-  
-  .page-link {
-    color: gray;
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #eefbff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin: 0 2px;
-  }
-  
-  .page-link:hover {
-    color: gray;
-    text-decoration: none;
-    background-color: #d6e6ff;
-  }
+}
   
 
-
+  

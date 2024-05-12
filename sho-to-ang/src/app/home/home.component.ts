@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  
+
   changeColor(): void {}
 
   resetColor(): void {}
 
-  sendEmail(): void {
-    window.location.href = 'mailto:example@lpnu.ua'; }
+  screenWidth: number;
+
+  constructor() {
+    this.screenWidth = window.innerWidth;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) { 
+    this.screenWidth = window.innerWidth;
+  }
 }
+
+

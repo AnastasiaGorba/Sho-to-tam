@@ -1,0 +1,21 @@
+<div class="container">
+    <div *ngIf="screenWidth >= 992">
+        <div class="row">
+            <div class="col-lg-8">Станом на {{message}} рік, у гуртожитку проживає 1024 людини</div>
+            <div class="col-lg-4"> 
+                <button class="bg"><a routerLink="/search" class="text-decoration-none">Пошук мешканця</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="screenWidth < 992">
+        <div class="row">
+            <div class="col-12">Станом на {{message}} рік, у гуртожитку проживає 1024 людини</div>
+        </div>
+        <div class="row">
+            <div class="col-12"> 
+                <button class="bg-sm"><a routerLink="/search" class="text-decoration-none">Пошук</a></button>
+            </div>
+        </div>
+    </div>
+</div>

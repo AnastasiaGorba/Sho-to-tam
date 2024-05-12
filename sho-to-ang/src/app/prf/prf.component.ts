@@ -1,13 +1,11 @@
-import { Component, HostListener } from '@angular/core';
-
+import { Component, HostListener  } from '@angular/core';
 
 @Component({
-  selector: 'app-guest',
-  templateUrl: './guest.component.html',
-  styleUrl: './guest.component.css'
+  selector: 'app-prf',
+  templateUrl: './prf.component.html',
+  styleUrls: ['./prf.component.css']
 })
-export class GuestComponent {
- 
+export class PrfComponent {
   constructor() {
     this.screenWidth = window.innerWidth;
   }
@@ -20,11 +18,3 @@ export class GuestComponent {
     this.screenWidth = window.innerWidth;
   }
 }
-
-
-
-
- 
-  
-
- 

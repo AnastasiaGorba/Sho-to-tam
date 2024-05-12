@@ -1,45 +1,88 @@
 <app-header></app-header>
 <div class="main">
-    <div class="container">
-        <div class="row">
-        
-            <div class="col-md-6">
-                <a routerLink="/data">
-                    <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
-                        <h4>База даних мешканців</h4>
-                    </button>
-                </a>
+        <div *ngIf="screenWidth < 992">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a routerLink="/data">
+                            <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()">
+                                <h4>База даних мешканців</h4>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a routerLink="/guest">
+                            <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()">
+                                <h4>Гості</h4>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()" >
+                            <h4>Заяви</h4>
+                        </button>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()" >
+                            <h4>Сканер</h4>
+                        </button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    
+    
+        <div *ngIf="screenWidth >= 992">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a routerLink="/data">
+                        <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()">
+                            <h4>База даних мешканців</h4>
+                        </button>
+                    </a>
+                </div>
+                    
+                <div class="col-lg-6">
+                    <a routerLink="/guest">
+                        <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()">
+                            <h4>Гості</h4>
+                        </button>
+                    </a>
+                </div>
             </div>
+        </div>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()" >
+                        <h4>Заяви</h4>
+                    </button>
+                </div>
                 
-            <div class="col-md-6">
-                <a routerLink="/guest">
-                    <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor() ">
-                        <h4>Гості</h4>
+                <div class="col-lg-6">
+                    <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()">
+                        <h4>Сканер</h4>
                     </button>
-                </a>
+                </div>
             </div>
-
         </div>
-    </div>
-
-
-    <div class="container">
-        <div class="row">
-        
-            <div class="col-md-6">
-                <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()" (click)="sendEmail()">
-                    <h4>Заяви</h4>
-                </button>
-            </div>
-            
-            
-            <div class="col-md-6">
-                <button class="container1" (mouseenter)="changeColor()" (mouseleave)="resetColor()">
-                    <h4>Сканер</h4>
-                </button>
-            </div>
-        
-        </div>
-    </div>
+        </div> 
     
 </div>

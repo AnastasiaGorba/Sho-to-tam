@@ -1,0 +1,103 @@
+<app-menu></app-menu>
+<div class="main">
+    <app-menudata></app-menudata>
+    <div class="container">
+        <div *ngIf="screenWidth >= 992">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="rectangle-frame1">
+                        <app-datatable></app-datatable>
+                    </div>
+                </div>
+                <div class="col-lg-5"> 
+                    <div class="rectangle-frame">
+                        <div class="fn">
+                            <img src="assets/icons/baton.jpg" class="cat">
+                            <p class="data">Особиста інформація:<br></p>
+                            <p class="name">Прізвище <br> Ім'я По батькові</p>
+                        </div>
+    
+                        <p class="number1">Номер телефона:</p>
+                        <p class="number2">+3806874521963</p>
+    
+                        <p class="number1">Email:</p>
+                        <p class="number2">imia.prizvysche.pm.2022&#64;lpnu.ua</p>
+    
+                        <p class="number1">Інститут:</p>
+                        <p class="number2">ІМФН</p>
+    
+                        <p class="number1">Група:</p>
+                        <p class="number2">ПМ, 2 курс</p>
+            
+                        <p class="number11">ID:</p>
+                        <p class="number22">КT 18769624</p>
+                        <p class="number11">Кімната:</p>
+                        <p class="number22">535</p>
+                        <p class="number11">Перепустка дійсна до:</p>
+                        <p class="number22">24.03.2024 р.</p><br>
+    
+                        <p class="number11">Остання оплата за житло:</p>
+                        <p class="number22">24.09.2023 р.</p>
+                        <p class="number11">Заборгованність:</p>
+                        <p class="number22">Так</p><br>
+    
+                        <p class="number11">Гісті:</p>
+                        <p class="number22">Ні</p>
+                        <p class="number11">Заяви:</p>
+                        <p class="number22">Ні<br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="screenWidth < 992">
+            <div class="row">
+                <div class="col">
+                    <div class="rectangle-frame1">
+                        <app-datatable></app-datatable>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"> 
+                    <div class="rectangle-frame" style="margin-top: 60px;">
+                        <div class="fn">
+                            <img src="assets/icons/baton.jpg" class="cat">
+                            <p class="data">Особиста інформація:<br></p>
+                            <p class="name">Прізвище <br> Ім'я По батькові</p>
+                        </div>
+    
+                        <p class="number1">Номер телефона:</p>
+                        <p class="number2">+3806874521963</p>
+    
+                        <p class="number1">Email:</p>
+                        <p class="number2">imia.prizvysche.pm.2022&#64;lpnu.ua</p>
+    
+                        <p class="number1">Інститут:</p>
+                        <p class="number2">ІМФН</p>
+    
+                        <p class="number1">Група:</p>
+                        <p class="number2">ПМ, 2 курс</p>
+            
+                        <p class="number11">ID:</p>
+                        <p class="number22">КT 18769624</p>
+                        <p class="number11">Кімната:</p>
+                        <p class="number22">535</p>
+                        <p class="number11">Перепустка дійсна до:</p>
+                        <p class="number22">24.03.2024 р.</p><br>
+    
+                        <p class="number11">Остання оплата за житло:</p>
+                        <p class="number22">24.09.2023 р.</p>
+                        <p class="number11">Заборгованність:</p>
+                        <p class="number22">Так</p><br>
+    
+                        <p class="number11">Гісті:</p>
+                        <p class="number22">Ні</p>
+                        <p class="number11">Заяви:</p>
+                        <p class="number22">Ні<br></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    

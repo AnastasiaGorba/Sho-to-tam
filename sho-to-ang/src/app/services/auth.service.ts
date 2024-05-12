@@ -21,16 +21,13 @@ export class AuthService {
     return this.getToken() !== null;
   }
 
-  login(userInfo: { email: string, identificationCode: string }): Observable<boolean> {
-    if (userInfo.email === '' && userInfo.identificationCode === '') {
+  guest(userInfo: {nameg: string, namem: string, room: number, ID: string, time: string}): Observable<boolean> {
+    if (userInfo.nameg === '' && userInfo.namem === '' && userInfo.room === 0 && userInfo.ID === '' ) {
       this.setToken('');
       return of(true);
     }
     return throwError(() => new Error(''));
   }
-
-  logout(){
-    this.router.navigate(['sign'])
-  }
 }
+
 
