@@ -1,14 +1,14 @@
 header {
     position: fixed;
-    top: 0; /* установите верхнюю границу контейнера вверху страницы */
+    top: 0; 
     background-color: #BBDEFF;
     width: 100%;
     height: 70px;
-    z-index: 1000; /* установите z-index, чтобы контейнер header был поверх остального контента */
+    z-index: 1000; 
 }
 
 .main {
-    margin-top: 70px; /* компенсируем высоту header, чтобы содержимое не скрывалось за ним */
+    margin-top: 70px; 
 }
 
 .logo{
@@ -24,7 +24,9 @@ header {
     display: flex;
     align-items: center; 
     margin-left: -75px; 
+    width: 800px;
 }
+
 
 .rectangle-frame .myButton {
     background-color: #BBDEFF; 
@@ -39,17 +41,21 @@ header {
     margin-left: 40px;
 }
 
+.rectangle-frame .myButton.active {
+    color: gray; 
+}
+
 .rectangle-frame .myButton:hover {
     text-decoration: underline; 
 }
 
 .header_user{
-    position: absolute; /* используйте absolute вместо float:right */
+    position: absolute; 
     right: 60px; 
-    top: 0; /* установите верхнюю границу контейнера вверху страницы */
-    height: 70px; /* установите высоту, чтобы соответствовать header */
+    top: 0; 
+    height: 70px; 
     display: flex;
-    align-items: center; /* выравнивание по вертикали */
+    align-items: center; 
 }
 
 .dropdown {

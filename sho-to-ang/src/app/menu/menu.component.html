@@ -5,14 +5,17 @@
                 <div class="col">
                     <a routerLink="/home"><img src="assets/icons/Group 1.png" class="logo"></a>
                 </div>
-                <div class="col-6">
-                    <div class="rectangle-frame">
-                    <a routerLink="/data"><button class="myButton"><b>Мешканці</b></button></a>
-                    <a routerLink="/guest"><button class="myButton"><b>Гості</b></button></a>
-                    <button class="myButton"><b>Заявки</b></button>
-                    <button class="myButton"><b>Сканер</b></button>
-                    </div>
+                <div class="rectangle-frame">
+                    <a routerLink="/data">
+                        <button class="myButton" [class.active]="activeButton === 'residents'"><b>Мешканці</b></button>
+                    </a>
+                    <a routerLink="/guest">
+                        <button class="myButton" [class.active]="activeButton === 'guests'"><b>Гості</b></button>
+                    </a>
+                    <button class="myButton" [class.active]="activeButton === 'requests'"><b>Заявки</b></button>
+                    <button class="myButton" [class.active]="activeButton === 'scanner'"><b>Сканер</b></button>
                 </div>
+                
                 <div class="col">
                     <div class="header_user">
                         <div class="dropdown">
